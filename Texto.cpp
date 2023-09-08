@@ -52,9 +52,11 @@ bool Texto::palindromo() {
 }
 
 char* Texto::toCharArray() {
-   char* chAr = new char[cadena.length()];
+   char* chAr = new char[cadena.length() + 1];
    for (int i = 0; i < cadena.length(); ++i) {
       chAr[i] = cadena[i];
    }
+   // null terminated string (char array)
+   chAr[cadena.length()] = '\0';
    return chAr;
 }

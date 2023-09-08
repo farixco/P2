@@ -1,6 +1,7 @@
 #include "Parrafo.h"
 #include "Texto.h"
 #include <iostream>
+#include <iterator>
 
 int main() {
    std::cout << "Ingrese cualquier texto." << std::endl;
@@ -30,5 +31,14 @@ int main() {
    Parrafo* parrafo = new Parrafo(par, lin);
    std::cout << "Longitud total: " << parrafo->getLength() << std::endl;
    char** parchar = parrafo->toCharMatrix();
+   int j;
+   for (int i = 0; i < lin; ++i) {
+      j = 0;
+      while (parchar[i][j] != '\0') {
+	 std::cout << *(*(parchar + i) + j) << " ";
+	 ++j;
+      }
+      std::cout << std::endl;
+   } 
    return 0;
 }
