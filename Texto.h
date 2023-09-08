@@ -12,7 +12,7 @@ class Texto {
    bool palindromo();
    char* toCharArray();
 
-   Texto(std::string _string) {
+   Texto(std::string _string = "") {
       cadena = _string;
    }
 };
