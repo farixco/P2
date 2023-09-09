@@ -5,11 +5,7 @@ int Texto::getLength() {
 }
 
 bool Texto::contains(char c) {
-   if (cadena.find(c) >= 0) {
-      return true;
-   } else {
-      return false;
-   }
+   return (cadena.find(c) != std::string::npos);
 }
 
 bool Texto::contains(char c, int n) {

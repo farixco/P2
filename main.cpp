@@ -1,7 +1,6 @@
 #include "Parrafo.h"
 #include "Texto.h"
 #include <iostream>
-#include <iterator>
 
 int main() {
    std::cout << "Ingrese cualquier texto." << std::endl;
